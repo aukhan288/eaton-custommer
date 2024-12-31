@@ -1,0 +1,36 @@
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_TO_CART = 'REMOVE_TO_CART';
+export const EMPTY_CART = "EMPTY_CART";
+export const DELETE_ITEM = "DELETE_ITEM";
+
+export const REMOVE_APPLY_COUPON = 'REMOVE_APPLY_COUPON';
+export const REMOVE_COUPON = 'REMOVE_COUPON';
+export const EMPTY_COUPON = 'EMPTY_COUPON';
+
+export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
+
+export const SET_SIGNUP_INFO = 'SET_SIGNUP_INFO';
+export const VERIFY_OTP = 'VERIFY_OTP';
+
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+
+export const UPDATE_PROFILE = 'UPDATE_PROFILE';
+
+export const SET_PAYMENT_METHODE = 'SET_PAYMENT_METHODE';
+
+export const SET_ORDER_ID = 'SET_ORDER_ID';
+
+export const DISABLED_ONBOARDING = 'DISABLED_ONBOARDING';
+
+export const SET_DELIVERY_DATE = 'SET_DELIVERY_DATE';
+export const SET_DELIVERY_DATE_TIME = 'SET_DELIVERY_DATE_TIME';
+
+export const SET_MIN_ORDER_AMT = 'SET_MIN_ORDER_AMT';
+
+export const CHANGE_THEME = 'CHANGE_THEME';
+export const CHANGE_LANGUAGE = 'CHANGE_LANGUAGE';
+
+export const ADD_TO_FEVORITE = 'ADD_TO_FEVORITE';
+export const REMOVE_FROM_FEVORITE = 'REMOVE_FROM_FEVORITE';
+export const SET_FEVORITE_ITEM = 'SET_FEVORITE_ITEM';

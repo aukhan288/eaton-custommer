@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "467127548373",
+    "project_id": "ea8on-9e8b0",
+    "storage_bucket": "ea8on-9e8b0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467127548373:android:15a20318b141da3424e55c",
+        "android_client_info": {
+          "package_name": "com.ea8on"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHl7JLHx1k8syyYJEIcYVY64BW2YC8LxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
