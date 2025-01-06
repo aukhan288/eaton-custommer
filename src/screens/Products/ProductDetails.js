@@ -298,7 +298,10 @@ const ProductDetails = ({ route, navigation }) => {
                 <>
                   <View style={styles.productInfoContainer}>
                     <View style={{ flexDirection: 'column' }}>
-                      <Text style={{ marginTop: 10, fontWeight: '700', fontSize: 20 }}>Flavours:</Text>
+                      {productDetail?.flavours?.length > 0 && (
+                        <Text style={{ marginTop: 10, fontWeight: '700', fontSize: 20 }}>Flavours:</Text>
+                      ) }
+                      
                       <View style={{ flexDirection: 'row' }}>
                         {productDetail?.flavours?.length > 0 && productDetail?.flavours?.map((flavour, index) => {
                           return (
@@ -310,9 +313,13 @@ const ProductDetails = ({ route, navigation }) => {
                           )
                         })}
                       </View>
-                      <Text style={{ marginTop: 10, fontWeight: '700', fontSize: 20 }}>Size</Text>
+                      {productDetail?.sizes?.length > 0 && (
+                        <Text style={{ marginTop: 10, fontWeight: '700', fontSize: 20 }}>Size</Text>
+                      )}
                       <View style={{ flexDirection: 'column', paddingTop: 10 }}>
                         {productDetail?.sizes?.length > 0 && productDetail?.sizes?.map((size, index) => {
+                          console.log('sssssssssss',productDetail);
+                          
                           return (
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                               <Pressable
