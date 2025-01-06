@@ -139,7 +139,6 @@ export const login = (mobile, password, fcmToken) => {
   return async dispatch => {
     try {
       const response = await fetch(API_BASE_URL + 'login', {
-      // const response = await fetch(API_BASE_URL + 'login.php', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -152,17 +151,18 @@ export const login = (mobile, password, fcmToken) => {
         }),
       });
       
-      // const resData = await response.json(); // Parse as JSON
-      const resText = await response.text(); // Get raw response text
-      const resData = JSON.parse(resText);
-      console.log('kkkkkkkkkkkkkkk',JSON.stringify(resData));
-      
-      
       // Check if the response is not okay (status 200-299)
       if (!response.ok) {
-        // Handle error responses
-        throw new Error(resData.msg || 'Something went wrong');
+        // If not okay, handle error (the response status is not in the range 200-299)
+        const errorData = await response.json(); // Parse the error message if available
+        throw new Error(errorData.msg || 'Something went wrong');
       }
+      
+      // Parse the response body as JSON if status is okay
+      const resData = await response.json();
+      
+      // Continue processing resData as needed
+      
 
       // Dispatch the login action with user data
       dispatch({

@@ -122,7 +122,7 @@ const Home = ({navigation}) => {
         .then(response => {
 
           
-          setHomeSectionProducts(response.home_section);
+          setHomeSectionProducts(response?.home_section);
           setLoadingMoreItem(false);
         });
     } else {
@@ -231,6 +231,8 @@ const Home = ({navigation}) => {
     })
       .then(response => response.json())
       .then(response => {
+        console.log('111111',response);
+        
         setLoading(false)
 
         let data=[];
@@ -342,8 +344,7 @@ const Home = ({navigation}) => {
         <View style={styles.swiperContainerView}>
         <Text style={{paddingHorizontal:20, marginVertical:5, fontWeight:'600', fontSize:20, color:'#000'
 }}>Welcome {name?name:'Guest User'}!</Text>
-{console.log('ttttttttttt',token)
-}
+
 
            <Swiper activeDotColor={BaseColor.primary} dotColor={BaseColor.black} style={{overflow:'hidden', borderRadius:15}} loop autoplay>
           {headerBanner?.map((item, index) =>  ( 
@@ -401,7 +402,7 @@ const Home = ({navigation}) => {
               keyExtractor={item => item.sessionID + new Date('1970')}
               renderItem={({item}) => (
                 <>
-                  <Header title={item.title} navigateTo="" />
+                  <Header title={item?.title} navigateTo="" />
                   <HorizontalProduct product={item.product} />
                 </>
               )}
